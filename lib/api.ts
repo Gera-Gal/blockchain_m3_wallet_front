@@ -1,6 +1,8 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 
-const API_URL = 'http://127.0.0.1:5000/api';  // URL completa
+dotenv.config();
+const API_URL = `${process.env.API_BASE}/api`;  // URL completa
 
 // Función para registrar un usuario
 export const register = async (username: string, password: string) => {
